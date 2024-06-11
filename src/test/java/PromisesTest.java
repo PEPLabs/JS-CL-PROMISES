@@ -2,8 +2,10 @@
 import java.io.File;
 
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,9 +16,9 @@ import org.openqa.selenium.JavascriptExecutor;
 
 public class PromisesTest {
 
-    private static WebDriver webDriver;
+    private WebDriver webDriver;
 
-    @BeforeAll
+    @BeforeEach
     public void setUp() {
         // Set up ChromeDriver path
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
@@ -34,7 +36,7 @@ public class PromisesTest {
         webDriver.get(path);
     }
 
-    @AfterAll
+    @AfterEach
     public void tearDown() {
         // Close the browser
         webDriver.quit();
