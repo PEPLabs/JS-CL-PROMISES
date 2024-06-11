@@ -24,7 +24,7 @@ public class PromisesTest {
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
 
         // Get file
-        File file = new File("index.html");
+        File file = new File("src/main/java/index.html");
         String path = "file://" + file.getAbsolutePath();
 
         // Create a new ChromeDriver instance
