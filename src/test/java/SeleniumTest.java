@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.JavascriptExecutor;
 
-public class PromisesTest {
+public class SeleniumTest {
 
     private WebDriver webDriver;
 
