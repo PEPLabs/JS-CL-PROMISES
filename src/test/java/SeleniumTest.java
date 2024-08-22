@@ -62,23 +62,26 @@ public class SeleniumTest {
         Assertions.assertEquals("The sum is divisible by 5!", output);
     }
 
-    @Test
-    public void testIsDivisibleBy5Again() {
-        JavascriptExecutor jsExecutor = (JavascriptExecutor) webDriver;
-        jsExecutor.executeScript(
-                "isDivisibleBy5(5, 4).then(value => {document.getElementById(\"output2\").innerText = value;});");
+@Test
+public void testIsDivisibleBy5Again() {
+    JavascriptExecutor jsExecutor = (JavascriptExecutor) webDriver;
+    jsExecutor.executeScript(
+        "isDivisibleBy5(5, 4).then(value => {document.getElementById(\"output2\").innerText = value;})"
+        + ".catch(error => {document.getElementById(\"output2\").innerText = error;});"
+    );
 
-        try {
-            Thread.sleep(3500);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        WebElement outputElement = webDriver.findElement(By.id("output2"));
-        String output = outputElement.getText().trim();
-
-        Assertions.assertEquals("The sum is NOT divisible by 5!", output);
+    try {
+        Thread.sleep(3500); // Wait for the async operation to complete
+    } catch (InterruptedException e) {
+        e.printStackTrace();
     }
+
+    WebElement outputElement = webDriver.findElement(By.id("output2"));
+    String output = outputElement.getText().trim();
+
+    Assertions.assertEquals("The sum is NOT divisible by 5!", output);
+}
+
 
     @Test
     public void testIsDivisibleBy5Handler() {
