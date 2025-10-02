@@ -7,10 +7,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.revature</groupId>
-  <artifactId>THEIA-SELENIUM-EXAMPLE-CHANGE-ME</artifactId>
+  <artifactId>JS-CL-PROMISES</artifactId>
   <version>1.0</version>
 
-  <name>THEIA-SELENIUM-EXAMPLE-CHANGE-ME</name>
+  <name>JS-CL-PROMISES</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
