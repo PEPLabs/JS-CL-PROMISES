@@ -1,0 +1,30 @@
+{
+  "type": "java",
+  "testFiles": [
+    {
+      "path": "src/test/java/SeleniumTest.java",
+      "testCases": [
+        {
+          "methodName": "testIsDivisibleBy5",
+          "label": "Verify sum divisibility by 5",
+          "description": "Checks that the output message correctly indicates when the sum of two numbers is divisible by 5."
+        },
+        {
+          "methodName": "testIsDivisibleBy5Again",
+          "label": "Verify sum not divisible by 5",
+          "description": "Checks that the output message correctly indicates when the sum of two numbers is NOT divisible by 5."
+        },
+        {
+          "methodName": "testIsDivisibleBy5Handler",
+          "label": "Verify handler for divisible sum",
+          "description": "Tests the isDivisibleBy5Handler function to ensure it correctly processes a sum divisible by 5."
+        },
+        {
+          "methodName": "testIsDivisibleBy5HandlerAgain",
+          "label": "Verify handler for non-divisible sum",
+          "description": "Tests the isDivisibleBy5Handler function to ensure it correctly processes a sum that is NOT divisible by 5."
+        }
+      ]
+    }
+  ]
+}
